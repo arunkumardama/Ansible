@@ -1,8 +1,8 @@
-- name: Var on Playlevel
-  hosts: all
-    vars:
-      URL: Arun.com
-        tasks:
-          - name: Print URL
-            ansible.builtin.debug:
-              msg: URL = {{URL}}
+- name: Var in Playbook leve
+  hosts: All
+  vars:
+    URL: Arun.com
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
