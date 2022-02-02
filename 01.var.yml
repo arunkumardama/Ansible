@@ -1,4 +1,4 @@
-- name: Demo on Sample playbook
+- name: Demo test script for Ansible
   hosts: all
   tasks:
     - name: Print Hello
