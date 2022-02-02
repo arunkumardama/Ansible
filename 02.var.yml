@@ -1,0 +1,8 @@
+- name: Var on Playlevel
+    hosts: All
+    vars:
+        URL: Arun.com
+    tasks:
+    - name: Print URL
+        ansible.builtin.debug:
+            msg: URL = {{URL}}
