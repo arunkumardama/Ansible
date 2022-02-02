@@ -1,5 +1,5 @@
 - name: Var in Playbook leve
-  hosts: All
+  hosts: all
   vars:
     URL: Arun.com
   tasks:
