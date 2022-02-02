@@ -1,5 +1,5 @@
 - name: Var on Playlevel
-  hosts: All
+  hosts: all
     vars:
       URL: Arun.com
         tasks:
