@@ -3,7 +3,7 @@
   tasks:
     - name: demo
       debug:
-      msg: hello, {{item}}
-    loop:
-      - arun
-      - kumar
+        msg: hello, {{item}}
+      loop:
+        - arun
+        - kumar
