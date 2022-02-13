@@ -24,7 +24,7 @@
 
 - name: Download Frontend files from github
   ansible.builtin.unarchive:
-    src: "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
+    src: "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
     dest: /tmp
     remote_src: yes
 
