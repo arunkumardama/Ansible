@@ -21,3 +21,8 @@
     name: mongod
     state: restarted
     enabled: yes
+
+- name: Download database files
+    import_role:
+      name: common
+      tasks_from: download
