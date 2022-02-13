@@ -1,8 +1,9 @@
 - name: loops concept
   hosts: localhost
-  task:
+  tasks:
     - name: demo
-    debug: hello, {{item}}
+      debug:
+      msg: hello, {{item}}
     loop:
-    - arun
-    - kumar
+      - arun
+      - kumar
