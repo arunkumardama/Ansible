@@ -22,11 +22,10 @@
     state: restarted
     enabled: yes
 
-- name: Download Frontend files from github
-  ansible.builtin.unarchive:
-    src: "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
-    dest: /tmp
-    remote_src: yes
+- name: Download Database Code
+  import_role:
+    name: common
+    tasks_from: download
 
 - name: Load schema for catalogue
   community.mongodb.mongodb_shell:
