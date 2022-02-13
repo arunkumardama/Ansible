@@ -22,10 +22,11 @@
     state: restarted
     enabled: yes
 
-- name: Download database files
-    import_role:
-      name: common
-      tasks_from: download.yml
+- name: Download Database Code
+  import_role:
+    name: common
+    tasks_from: download
+
 
 - name: Load schema for catalogue
   community.mongodb.mongodb_shell:
