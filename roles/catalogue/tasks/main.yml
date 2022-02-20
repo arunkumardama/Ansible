@@ -16,10 +16,11 @@
     name: roboshop
     state: present
 
-- name: Download app code
-  import_role:
-    name: common
-    tasks_from: download
+- name: Download {{COMPONENT}} from Git repo and Extract it
+  ansible.builtin.unarchive:
+    src: https://github.com/roboshop-devops-project/{{COMPONENT}}/archive/main.zip
+    dest: /tmp
+    remote_src: yes
 
 - name: clean old directory
   ansible.builtin.file:
