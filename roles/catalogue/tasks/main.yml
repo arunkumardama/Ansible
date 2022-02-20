@@ -31,7 +31,7 @@
     src: /tmp/catalogue-main
     dest: /home/roboshop/catalogue
     remote_src: yes
-    become_user: roboshop
+become_user: roboshop
 
 - name: Install catalogue dependncies
   community.general.npm:
