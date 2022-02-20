@@ -1,0 +1,42 @@
+- name: Copy the nodeJS repo file
+  ansible.builtin.copy:
+    src: nodejs.repo
+    dest: /etc/yum.repos.d/nodejs.repo
+
+
+- name: Install nodejs
+  ansible.builtin.yum:
+    - name:
+        - nodejs
+        - gcc-c++
+      state: installed
+
+- name: Add application user
+  ansible.builtin.user:
+    name: roboshop
+    state: present
+
+- name: Download app code
+  import_role:
+    name: common
+    tasks_from: download
+
+- name: clean old directory
+  ansible.builtin.file:
+    path: /home/roboshop/catalogue
+    state: absent
+
+- name: move the catalogue files
+  ansible.builtin.copy:
+    src: /tmp/catalogue-main
+    dest: /home/roboshop/catalogue
+    remote_src: yes
+  become_user: roboshop
+
+- name: Install catalogue dependncies
+  community.general.npm:
+    path: /home/roboshop/catalogue
+become_user: roboshop
+
+
+- name:
