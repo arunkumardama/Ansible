@@ -1,10 +1,10 @@
 - name: Setup MongoDB Component
-  hosts: MONGODB
+  hosts: CATALOGUE
   become: yes
   tags:
-    - mongodb
+    - catalogue
   roles:
-    - mongodb
+    - catalogue
 
 
 
