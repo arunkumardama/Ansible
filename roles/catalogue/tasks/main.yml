@@ -38,7 +38,7 @@
     path: /home/roboshop/catalogue
   become_user: roboshop
 
-- name: setup catalogue systemd onfg files
+- name: setup catalogue systemd confg files
   ansible.builtin.templet:
     src: systemd.service
     dest: /etc/systemd/system/catalogue.service
