@@ -15,10 +15,10 @@
     - mongodb
 
 
-#- name: setup frontend Component
- # hosts: all
-  #roles:
-   # - frontend
+- name: setup frontend Component
+  hosts: all
+  roles:
+    - frontend
 
 #- name: setup frontend Component
  # hosts: all
