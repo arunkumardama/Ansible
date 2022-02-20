@@ -35,7 +35,7 @@
 
 - name: Install catalogue dependncies
   community.general.npm:
-    path: /home/roboshop/catalogue/catalogue-main
+    path: /home/roboshop/catalogue/catalogue
   become_user: roboshop
 
 - name: setup catalogue systemd confg files
