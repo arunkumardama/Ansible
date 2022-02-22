@@ -25,6 +25,6 @@
 
 
 name: setup frontend Component
-  hosts: all
+  - hosts: all
   roles:
     - frontend
